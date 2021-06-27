@@ -1,1 +1,1 @@
-# WU-quiz
+# https://rusjstudent.github.io/WU-quiz/
