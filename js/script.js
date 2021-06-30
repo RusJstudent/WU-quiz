@@ -11,9 +11,9 @@ let answers = ['2017', '20', 'spaiowenta', '30', '50'];
 
 
 
-let userName = prompt('Before we start, write here you name, please', '');
-// let userName = 'admin';
-if (userName === null || userName.trim() === "") enteredNoName();
+// let userName = prompt('Before we start, write here you name, please', '');
+// // let userName = 'admin';
+// if (userName === null || userName.trim() === "") enteredNoName();
 
 let difficulty = ['easy', 'normal', 'hard', 'unreal'];
 let difficultyTime = [120, 30, 7, 1];
@@ -25,10 +25,10 @@ let i = 1;
 
 setDifficulty();
 
-function enteredNoName() {
-    userName = prompt('Is not answer, dude. Write you name, please', '');
-    if (!userName) noName();
-}
+// function enteredNoName() {
+//     userName = prompt('Is not answer, dude. Write you name, please', '');
+//     if (!userName) noName();
+// }
 
 function result(num) {
     return num === 0 ? `${rightAnswers} out of ${q.length} questions\u{1F630}<br><br>` :
@@ -117,8 +117,9 @@ function nextQuestion() {
     }, 1000 * (4 - index));
 }
 
+// <i><ins>${userName}</ins></i>
 function quizFinished() {
-    main.innerHTML = `<i><ins>${userName}</ins></i>, WU quiz<br>
+    main.innerHTML = `WU quiz<br>
     on level "${difficulty[index]}"<br> finished.<br><br>
     Your result: ${Math.round(rightAnswers/q.length*100)}%<br>
     You have answered <br>${result(rightAnswers)}`;
